@@ -1,0 +1,13 @@
+<h1>Posts</h1>
+
+<p>
+  Here is a list of all the posts. <a href="/posts/new">Click here</a> to create a new post.
+</p>
+
+<ul>
+  {{#posts}}
+    <li>
+      <a href="/posts/{{rowid}}">{{title}}</a>
+    </li>
+  {{/posts}}
+</ul>

@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* RESETS */
+
+body, body * {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* END RESETS */
+
+
+body {
+	font-family:Georgia,serif;
+	font-size:100%;
+	color:#4e443c;
+	font-weight: 400;
+	line-height: 1.45;
+  	padding-bottom:1.25em; /*20px /16px */
+}
+
+html {
+   font-size: 1em;
+}
+
+/* HEADINGS */
+
+p {
+	margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom:.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.441em;
+}
+
+h1 span {
+   display:none;
+}
+
+h2 {
+	font-size: 1.953em;
+}
+
+h3 {
+	font-size: 1.563em;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+small, .font_small {
+	font-size: 0.8em;
+}
+
+
+/* END HEADINGS */
+
+/* LAYOUT */
+
+#wrapper {
+	max-width:1200px;
+	margin:0 auto;
+	overflow:hidden;
+	width:100%;
+}
+
+
+
+#content {
+	width:90%;/*480px / 740*/
+	font-size:1.1em;
+	padding-left:20px; /*older browsers*/
+	padding-left:1.25rem; /*20px /16px */
+    padding-right:20px; /*older browsers*/
+	padding-right:1.25rem; /*20px /16px */
+}
+
+/* END LAYOUT */
+
+
+/* NAV */
+
+#nav {
+	width:100%;
+	display: block;
+	padding-top:1.25rem; /*20px /16px */
+	padding-bottom:1.25rem; /*20px /16px */
+	height:1.4em;
+	font-family:"Gill Sans",Helvetica,Arial,sans-serif;
+	clear:both;
+    margin-bottom:3.5em;
+}
+
+#nav li {
+	list-style-type: none;
+	line-height:1.4em;
+	float:left;
+	width:10%;  /*100/ number of list items*/
+	text-align:center;
+    border-bottom:2px solid #CACACA;
+}
+
+#nav ul{
+	padding-left:20px; /*older browsers*/
+	padding-left:1.25rem; /*20px /16px */
+	padding:0;
+}
+
+#nav a {
+	letter-spacing:3px;
+	display:block;
+	color:rgba(78,68,60,.5);
+
+}
+
+/* END NAV */
+
+/* FOOTER */
+
+footer {
+		width:100%;
+		margin:0 auto;
+		height:3em;
+		line-height:3em;
+		clear:both;
+		color:rgba(78,68,60,.5);
+}
+
+
+footer ul li{
+		display:inline;
+		color:#999;
+		font-size:.9em;
+}
+
+
+footer ul li a{
+		color:#999;
+		text-decoration:none; /*removes the underline from list item*/
+}
+
+footer ul li a:hover {
+		background:white;
+}
+
+/* END FOOTER */
+
+
+
+/* LISTS */
+
+ul {
+margin-left: 1.25em;
+}
+
+ol {
+   margin-left: 1.75em;
+}-->
+
+p, ol, ul, dl {
+  margin-bottom: 1.3em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+
+#primary ul, #secondary ul {
+    list-style-type: none;
+	margin-left:0px;
+}
+
+/* EMD LISTS */
+
+
+/* LINKS */
+
+a:link,
+a:visited {
+	color: #625090; /* violet */
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #000F60; /*purple*/
+	text-decoration: none;
+}
+
+nav a:hover strong,
+nav a:focus strong {
+	color:#625090;/* violet */
+}
+
+footer ul li a:hover,
+footer ul li a:focus {
+	color:#625090;/* violet */
+}
+
+/* END LINK STYLES */
+
+
+
+
+
+/* TEXT INPUT */
+
+input[type=text], input[type=email] {
+	display: block;
+	width:70%;
+	margin-bottom:1.25em;/* 20px/16px */
+	margin-top:1.25em;/* 20px/16px */
+	height:1.375em;/* 22px/16px */
+	font-size:1em;
+}
+
+textarea {
+width:80%;
+margin-bottom:3.5em;
+}
+
+/* END TEXT INPUT */
+
+/*POSTS*/
+
+.post-comment {
+margin-bottom:1.3em;
+}
+
+
+.post-comment-title {
+	border-bottom: 2px solid #CACACA;
+	margin-bottom:1.3em;
+}
+
+.post {
+margin-bottom:3.5em;
+}
+/*END POSTS*/

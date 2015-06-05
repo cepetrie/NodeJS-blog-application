@@ -17,7 +17,7 @@ var database = {
       //create tables, and execute ready callback when done
       async.parallel([
         function(c) {
-          db.run("CREATE TABLE IF NOT EXISTS posts (title, content, created_at);", c);
+          db.run("CREATE TABLE IF NOT EXISTS posts (title, slug, content, created_at, formatted);", c);
         },
         function(c) {
           db.run("CREATE TABLE IF NOT EXISTS user (firstName, lastName);", c);
@@ -29,7 +29,7 @@ var database = {
     });
   },
   getAllPosts: function(c) {
-    db.all("SELECT title, content, rowid FROM posts;", c);
+    db.all("SELECT *, rowid FROM posts ORDER BY created_at DESC;", c);
   }
 };
 

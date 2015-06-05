@@ -5,23 +5,32 @@ module.exports = [
   method: "GET",
   handler: require("./handlers/home")
 }, {
+    //single-post view
+    path: "/posts/{slug}",
+    method: "GET",
+    handler: require("./handlers/viewPost")
+}, {
+  path: "/posts/{slug}/edit",
+  method: "GET",
+  handler: require("./handlers/editPost")
+}, {
   path: "/posts", //duplicate of the home path
   method: "GET",
   handler: require("./handlers/home")
-}, {
-  path: "/posts/{id}",
+},  {
+  path: "/posts/new", 
   method: "GET",
-  handler: require("./handlers/getPost")
+  handler: require("./handlers/addPost")
 }, {
-  path: "/posts/{id}",
+  path: "/posts/{slug}",
   method: "POST",
-  handler: require("./handlers/setPost")
+  handler: require("./handlers/savePost")
 }, {    
   path: "/assets/{param*}",
   method: "GET",
   handler: {
     directory: {
-      path: "src"
+      path: "public"
     }
   }
 }];

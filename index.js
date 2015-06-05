@@ -1,7 +1,13 @@
 var hapi = require("hapi");
-var server = new hapi.Server();
-var db = require("./db");
+var server = new hapi.Server({
+    connections: {
+        router: {
+            stripTrailingSlash: true
+        }
+    }
+});
 server.connection({ port: 8000 });
+var db = require("./db");
 db.init(function(err) {
   if (err) {
     return console.error("db err", err);

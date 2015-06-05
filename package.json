@@ -11,7 +11,8 @@
     "sqlite3": "^3.0.8",
     "hapi": "^8.5.2",
     "handlebars": "^3.0.3",
-    "backbone": "^1.2.0"
+    "backbone": "^1.2.0",
+    "moment": "^2.10.3"
   },
   "devDependencies": {},
   "scripts": {

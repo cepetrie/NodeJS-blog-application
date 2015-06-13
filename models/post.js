@@ -3,7 +3,7 @@ var db = require("../db");
 var moment = require('moment');
 
 var LOAD = "SELECT * FROM posts WHERE slug = $slug;";
-var SAVE_NEW = "INSERT INTO posts (title, slug, content, created_at, formatted) VALUES ($title, $slug, $content, datetime('now'), $formatted);";
+var SAVE_NEW = "INSERT INTO posts (title, slug, content, created_at, formatted) VALUES ($title, $slug,  $content, datetime('now'), $formatted);";
 var UPDATE = "UPDATE posts SET title = $title, content = $content WHERE slug = $slug;";
 var LAST = "SELECT last_insert_rowid() AS rowid FROM posts;";
 
@@ -39,7 +39,7 @@ module.exports = Backbone.Model.extend({
       $title: data.title,
       $content: data.content,
       $id: id == "new" ? undefined : data.id,
-      $formatted: moment().format("dddd MMMM do, YYYY"),
+      $formatted: moment().format("dddd MMMM Do, YYYY"),
       $slug: slug
     }, done);
   }

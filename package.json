@@ -12,7 +12,8 @@
     "hapi": "^8.5.2",
     "handlebars": "^3.0.3",
     "backbone": "^1.2.0",
-    "moment": "^2.10.3"
+    "moment": "^2.10.3",
+    "hapi-auth-cookie": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {

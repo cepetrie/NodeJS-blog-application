@@ -8,6 +8,6 @@ module.exports = function(req, reply) {
       console.error(err);
     }
     //reload data
-    reply.redirect("/posts/");
+    reply.redirect("/");
   });
 };

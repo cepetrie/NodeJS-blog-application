@@ -120,16 +120,17 @@ small, .font_small {
 #nav-main ul{
 	margin:0;
 	padding:0;
+    font-weight: 600;
 }
 
-#nav-main a strong{
+#nav-main a{
 	letter-spacing:3px;
 	display:block;
 	color:rgba(78,68,60,.5);
 	border-right: 2px solid #788cb8;
 }
 
-#nav-main li:last-child a strong{
+#nav-main li:last-child a{
   border-right: none;
 }
 

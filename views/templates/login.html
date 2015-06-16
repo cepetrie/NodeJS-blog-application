@@ -1,15 +1,24 @@
-<h1>User Login</h1>
+<h1>Login</h1>
+<p>In order to Add/Edit a post please login first!</p>
 
-  
+<div id="mainform">
+ 
   <form action="/login" method="POST">
         {{error}}
-        <label>Name:</label>
-        <input type="text" name="name">
-      
-       
-        <label >Password:</label>
-        <input type="password" name="password">
-
-
-        <input type="submit">
+        
+        <fieldset>
+            <legend>Login Information: </legend>
+            <label>Name:</label>
+            <input type="text" name="name">
+                    
+            <label >Password:</label>
+            <input type="password" name="password">
+        
+            <input type="submit">
+        
+        </fieldset>
       </form>
+
+</div>
+
+

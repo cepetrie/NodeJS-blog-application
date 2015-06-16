@@ -1,22 +1,13 @@
 <h1>Posts</h1>
 
-<p>
-  Here is a list of all the posts. <a href="/posts/new">Click here</a> to create a new post.
-</p>
-
-<ul>
-  {{#posts}}
-    <li>
-        <a href="/posts/{{slug}}/">{{title}}</a>|{{formatted}}
-    </li>
-  {{/posts}}
-</ul>
+<h4>Here is a list of all the posts.</h4>
 
 
-<div class="span">
       {{#posts}}
-			<h1><a href="/posts/{{slug}}/">{{title}}</a></h1>
-			<p><em>{{formatted}}</em></p>
-			{{truncated}}
-	{{/posts}}
-</div>
+        <div class="border">
+            <h2><a href="/posts/{{slug}}/">{{title}}</a></h2>
+            <p><em>{{formatted}}</em></p>
+			<p class="post">{{truncated}}....</p>
+        </div>
+      {{/posts}}
+        

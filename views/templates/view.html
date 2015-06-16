@@ -1,11 +1,18 @@
-<a href="./edit">Click here to edit</a>
+<a href="./edit">Click here to edit post</a>
 
-{{#with post}}
-<h2>{{title}}</h2>
+<div id="mainform">
+    <fieldset>
+       <legend>View Post:</legend>  
 
-Content:{{content}}
+            {{#with post}}
+            <h4>Title:{{title}}</h4>
 
-Author:{{author}}
+            <h4>Content:</h4>{{content}}
 
-Date:{{formatted}}
-{{/with}}
+            <h4>Author:{{user}}</h4>
+
+            <h4>Date:{{formatted}}</h4>
+            {{/with}}
+        
+    </fieldset>
+</div>

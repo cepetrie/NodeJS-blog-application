@@ -97,37 +97,40 @@ small, .font_small {
 
 /* NAV */
 
-#nav {
+#nav-main {
 	width:100%;
 	display: block;
 	padding-top:1.25rem; /*20px /16px */
 	padding-bottom:1.25rem; /*20px /16px */
+	border-bottom:2px solid #CACACA;
 	height:1.4em;
-	font-family:"Gill Sans",Helvetica,Arial,sans-serif;
+	font-family:Arial,sans-serif;
 	clear:both;
-    margin-bottom:3.5em;
+    margin-bottom: 1.25rem;
 }
 
-#nav li {
+#nav-main li {
 	list-style-type: none;
 	line-height:1.4em;
 	float:left;
-	width:10%;  /*100/ number of list items*/
+	width:15%;  /*100/ number of list items*/
 	text-align:center;
-    border-bottom:2px solid #CACACA;
 }
 
-#nav ul{
-	padding-left:20px; /*older browsers*/
-	padding-left:1.25rem; /*20px /16px */
+#nav-main ul{
+	margin:0;
 	padding:0;
 }
 
-#nav a {
+#nav-main a strong{
 	letter-spacing:3px;
 	display:block;
 	color:rgba(78,68,60,.5);
+	border-right: 2px solid #788cb8;
+}
 
+#nav-main li:last-child a strong{
+  border-right: none;
 }
 
 /* END NAV */
@@ -217,41 +220,96 @@ footer ul li a:focus {
 
 /* END LINK STYLES */
 
-
-
-
-
 /* TEXT INPUT */
 
-input[type=text], input[type=email] {
+#mainform {
+	width:950px;	
+	padding-left:10px;
+	padding-bottom:20px;	
+}
+
+legend   {
+	background-color:#778899	;
+	border-radius:10px;
+	padding:10px;
+	width:20%;
+}
+
+input[type=submit]   {
+	display:block;
+	margin-top:10px;
+	padding:5px;
+	font-size:100%;
+}
+
+fieldset {
+	background-color:white;
+	border-radius: 10px;
+	padding:10px 15px 10px 10px;
+	margin:0 40px;
+}
+
+
+label {
 	display: block;
-	width:70%;
-	margin-bottom:1.25em;/* 20px/16px */
-	margin-top:1.25em;/* 20px/16px */
-	height:1.375em;/* 22px/16px */
-	font-size:1em;
+	padding-top:10px;
+	padding-bottom:5px;
+
+}
+
+input[type=text], input[type=password] {
+	display: block;
+	width:30%;
+	margin-bottom:10px;
+	height:24px;
+}
+
+.title{
+	width:50%;
+	height:24px;
+	}
+
+fieldset p {
+display:inline;
+margin-right:5px;
+margin-bottom:10px;	
+}
+
+
+legend   {
+	background-color:#778899	;
+	border-radius:10px;
+	padding:10px;
+	width:20%;
+}
+
+
+
+input[type=submit]   {
+	display:block;
+	margin-top:10px;
+	padding:5px;
+	font-size:100%;
 }
 
 textarea {
-width:80%;
-margin-bottom:3.5em;
+	width:100%;
 }
+
 
 /* END TEXT INPUT */
 
 /*POSTS*/
 
-.post-comment {
-margin-bottom:1.3em;
-}
+.border
+{
+    border: 1px solid #c7c7c7;
+    margin-bottom:10px;
+    padding-left: .7rem; 
+    padding-top: .5em;
+} 
 
-
-.post-comment-title {
-	border-bottom: 2px solid #CACACA;
-	margin-bottom:1.3em;
-}
-
-.post {
-margin-bottom:3.5em;
+.post{
+padding-bottom:3.5em;
 }
 /*END POSTS*/

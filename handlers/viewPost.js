@@ -8,7 +8,7 @@ module.exports = function(req, reply) {
     post.load(function() {
         reply.view("view", {
             title: post.get("title"),
-            post: post.toJSON()
+			post: post.toJSON()
         })
    })
 };

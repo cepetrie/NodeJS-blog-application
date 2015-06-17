@@ -12,7 +12,7 @@ module.exports = Backbone.Model.extend({
     name: "Untitled Post",
     title: "",
     content: "",
-    id: "new"
+    slug: "new"
   },
   load: function(done) {
     var self = this;
@@ -27,20 +27,30 @@ module.exports = Backbone.Model.extend({
   },
   save: function(done) {
     var self = this;
-    var id = this.get("id");
-    var q = id == "new" ? SAVE_NEW : UPDATE;
-    var query = db.connection.prepare(q);
-    var data = this.toJSON();
-    var slug = this.get("title").toLowerCase();
-    var space = /\s/g;
-    slug = slug.replace(space, "-");
-    
-    query.run({
-      $title: data.title,
-      $content: data.content,
-      $id: id == "new" ? undefined : data.id,
-      $formatted: moment().format("dddd MMMM Do, YYYY"),
-      $slug: slug
-    }, done);
+    if (this.get("slug") == "new") {
+      //run a save_new
+      var query = db.connection.prepare(SAVE_NEW);
+      var data = this.toJSON();
+      var slug = this.get("title").toLowerCase();
+      var space = /\s/g;
+      slug = slug.replace(space, "-");
+
+      query.run({
+        $title: data.title,
+        $content: data.content,
+        $formatted: moment().format("dddd MMMM Do, YYYY"),
+        $slug: slug
+      }, done);
+    } else {
+      //run an update
+      var query = db.connection.prepare(UPDATE);
+      var data = this.toJSON();
+
+      query.run({
+        $title: data.title,
+        $content: data.content,
+        $slug: data.slug
+      }, done);
+    }
   }
 });

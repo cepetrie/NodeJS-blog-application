@@ -2,8 +2,8 @@
 
 <div id="mainform">
 
-        <form action="/posts/{{post.id}}" method="POST" class="edit-post">
-          <input type="hidden" name="id" value="{{post.id}}">
+        <form action="/posts/{{post.slug}}" method="POST" class="edit-post">
+          <input type="hidden" name="slug" value="{{post.slug}}">
          
             <fieldset>
             <legend>Post Information:</legend>     
@@ -12,7 +12,7 @@
                 <input class="title" name="title" value="{{post.title}}">
               
                 <label>Content:</label>
-                <textarea name="content" rows="6" wrap=soft value="{{post.content}}"></textarea>
+                <textarea name="content" rows="6" wrap=soft>{{post.content}}</textarea>
              
                 <input type="submit">
 			</fieldset>

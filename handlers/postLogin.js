@@ -8,7 +8,7 @@ module.exports = function (req, reply) {
     // SELECT password from users where name = $username;
     db.connection.get("SELECT * FROM users WHERE username = $username", {
         $username: req.payload.name
-    }, function(err, expected) {
+    }, function (err, expected) {
         
         console.log(req.payload, expected, err);
         
@@ -20,8 +20,7 @@ module.exports = function (req, reply) {
             id = md5.digest("hex");
             response.state("user", req.payload.name);
             response.state("session", id);
-            console.log(req.payload.name, id);            
-            
+            console.log(req.payload.name, id);
             db.connection.run("UPDATE users SET session = $session WHERE username = $user", {
                 $user: req.payload.name,
                 $session: id

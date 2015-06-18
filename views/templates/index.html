@@ -2,12 +2,11 @@
 
 <h4>Here is a list of all the posts.</h4>
 
-
-      {{#posts}}
+    {{#posts}}
         <div class="border">
             <h2><a href="/posts/{{slug}}/">{{title}}</a></h2>
             <p><em>{{formatted}}</em></p>
 			<p class="post">{{truncated}}<a href="/posts/{{slug}}/">...&nbsp;&nbsp;More&raquo;</a></p>
         </div>
-      {{/posts}}
+    {{/posts}}
         

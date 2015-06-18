@@ -65,6 +65,12 @@ h4 {
 	font-size: 1.25em;
 }
 
+.view {
+    padding-top: 1.25em;
+    color: #778899;
+    font-weight: 800;
+  }
+
 small, .font_small {
 	font-size: 0.8em;
 }
@@ -219,6 +225,14 @@ footer ul li a:focus {
 	color:#625090;/* violet */
 }
 
+.edit {
+   font-family:Arial,sans-serif; 
+   line-height: 2.5em;
+   font-weight: 600;
+   letter-spacing:3px;
+   color:rgba(78,68,60,.5);
+}
+
 /* END LINK STYLES */
 
 /* TEXT INPUT */
@@ -235,6 +249,7 @@ legend   {
 	padding:10px;
 	width:20%;
 }
+
 
 input[type=submit]   {
 	display:block;
@@ -271,26 +286,9 @@ input[type=text], input[type=password] {
 	}
 
 fieldset p {
-display:inline;
-margin-right:5px;
-margin-bottom:10px;	
-}
-
-
-legend   {
-	background-color:#778899	;
-	border-radius:10px;
-	padding:10px;
-	width:20%;
-}
-
-
-
-input[type=submit]   {
-	display:block;
-	margin-top:10px;
-	padding:5px;
-	font-size:100%;
+    display:inline;
+    margin-right:5px;
+    margin-bottom:10px;	
 }
 
 textarea {
@@ -308,9 +306,10 @@ textarea {
     margin-bottom:10px;
     padding-left: .7rem; 
     padding-top: .5em;
+    padding-right: .7rem; 
 } 
 
 .post{
-padding-bottom:3.5em;
+    padding-bottom:3.5em;
 }
 /*END POSTS*/

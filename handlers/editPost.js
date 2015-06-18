@@ -1,14 +1,14 @@
 var Post = require("../models/post");
 
-module.exports = function(req, reply) {
+module.exports = function (req, reply) {
   //load from database
     var post = new Post({
         slug: req.params.slug
     });
-    post.load(function() {
+    post.load(function () {
         reply.view("post", {
-            title: "Edit post",
+            title: "Edit Post",
             post: post.toJSON()
         })
-   })
+    })
 };

@@ -1,9 +1,9 @@
 var db = require("../db");
 
-module.exports = function(req, reply) {
+module.exports = function (req, reply) {
     reply.view("login", {
-     title: "Login", 
-    }); 
+        title: "Login"
+    });
 };
 
     
